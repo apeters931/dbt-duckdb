@@ -30,3 +30,6 @@ jobs:
       - name: Install dbt Dependencies
         run: dbt deps
 
+      - name: Full dbt Run
+        run: dbt run
+
