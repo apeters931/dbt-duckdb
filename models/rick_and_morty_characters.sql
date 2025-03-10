@@ -1,1 +1,2 @@
-select * from {{ ref('characters') }}
+select * 
+from {{ ref('characters') }}

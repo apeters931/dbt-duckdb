@@ -892,3 +892,519 @@ drop view if exists "dev"."main"."rick_and_morty_characters__dbt_backup" cascade
 [0m20:38:33.611399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106873770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108a5b560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fe25d0>]}
 [0m20:38:33.611541 [debug] [MainThread]: Flushing usage events
 [0m20:38:34.075141 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:10:10.790189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078daae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083a0ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083a0c80>]}
+
+
+============================== 21:10:10.792689 | 4918d930-37b2-416c-9d41-7492989dab77 ==============================
+[0m21:10:10.792689 [info ] [MainThread]: Running with dbt=1.9.2
+[0m21:10:10.792950 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alecpeters/dbt-duckdb', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/alecpeters/dbt-duckdb/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:10:11.394688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084dbd40>]}
+[0m21:10:11.415491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084842c0>]}
+[0m21:10:11.417511 [info ] [MainThread]: Registered adapter: duckdb=1.9.2
+[0m21:10:11.476542 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m21:10:11.524516 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:10:11.524797 [debug] [MainThread]: Partial parsing: updated file: rick_and_morty://models/rick_and_morty_characters.sql
+[0m21:10:11.605899 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.rick_and_morty.example
+[0m21:10:11.607818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086791f0>]}
+[0m21:10:11.631099 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alecpeters/dbt-duckdb/target/manifest.json
+[0m21:10:11.632118 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alecpeters/dbt-duckdb/target/semantic_manifest.json
+[0m21:10:11.642553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108aceb10>]}
+[0m21:10:11.642743 [info ] [MainThread]: Found 1 seed, 1 model, 426 macros
+[0m21:10:11.642866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087c6090>]}
+[0m21:10:11.643504 [info ] [MainThread]: 
+[0m21:10:11.643632 [info ] [MainThread]: Concurrency: 24 threads (target='dev')
+[0m21:10:11.643726 [info ] [MainThread]: 
+[0m21:10:11.643908 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:10:11.644251 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m21:10:11.679710 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m21:10:11.679893 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m21:10:11.680007 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:10:11.690952 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m21:10:11.691521 [debug] [ThreadPool]: On list_dev: Close
+[0m21:10:11.691782 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m21:10:11.691958 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m21:10:11.694623 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:10:11.694757 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m21:10:11.694858 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:10:11.695181 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:10:11.695691 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:10:11.695838 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m21:10:11.696020 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:10:11.696160 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:10:11.696283 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m21:10:11.696599 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:10:11.696946 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:10:11.697055 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:10:11.697147 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:10:11.697289 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:10:11.697389 [debug] [ThreadPool]: On create_dev_main: Close
+[0m21:10:11.699320 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m21:10:11.701646 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:10:11.701775 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m21:10:11.701872 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:10:11.702063 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:10:11.702159 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:10:11.702261 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m21:10:11.710142 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m21:10:11.711528 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m21:10:11.712372 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m21:10:11.712515 [debug] [ThreadPool]: On list_dev_main: Close
+[0m21:10:11.712906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10845cb60>]}
+[0m21:10:11.713102 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:10:11.713201 [debug] [MainThread]: On master: BEGIN
+[0m21:10:11.713288 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:10:11.713488 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:10:11.713588 [debug] [MainThread]: On master: COMMIT
+[0m21:10:11.713673 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:10:11.713752 [debug] [MainThread]: On master: COMMIT
+[0m21:10:11.713879 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:10:11.713967 [debug] [MainThread]: On master: Close
+[0m21:10:11.714919 [debug] [Thread-1 (]: Began running node model.rick_and_morty.rick_and_morty_characters
+[0m21:10:11.715121 [info ] [Thread-1 (]: 1 of 1 START sql view model main.rick_and_morty_characters ..................... [RUN]
+[0m21:10:11.715278 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.rick_and_morty.rick_and_morty_characters)
+[0m21:10:11.715401 [debug] [Thread-1 (]: Began compiling node model.rick_and_morty.rick_and_morty_characters
+[0m21:10:11.718265 [debug] [Thread-1 (]: Writing injected SQL for node "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.718591 [debug] [Thread-1 (]: Began executing node model.rick_and_morty.rick_and_morty_characters
+[0m21:10:11.730965 [debug] [Thread-1 (]: Writing runtime sql for node "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.731431 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.731558 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: BEGIN
+[0m21:10:11.731670 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:10:11.731950 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:10:11.732066 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.732179 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+
+  
+  create view "dev"."main"."rick_and_morty_characters__dbt_tmp" as (
+    select * 
+from "dev"."main"."characters"
+  );
+
+[0m21:10:11.732472 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:10:11.734833 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.734969 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+alter view "dev"."main"."rick_and_morty_characters" rename to "rick_and_morty_characters__dbt_backup"
+[0m21:10:11.735230 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:10:11.736314 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.736468 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+alter view "dev"."main"."rick_and_morty_characters__dbt_tmp" rename to "rick_and_morty_characters"
+[0m21:10:11.736708 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:10:11.741646 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: COMMIT
+[0m21:10:11.741843 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.741964 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: COMMIT
+[0m21:10:11.742475 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:10:11.744383 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:10:11.744519 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+drop view if exists "dev"."main"."rick_and_morty_characters__dbt_backup" cascade
+[0m21:10:11.744804 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:10:11.745802 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: Close
+[0m21:10:11.746626 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4918d930-37b2-416c-9d41-7492989dab77', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d81ac0>]}
+[0m21:10:11.746874 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.rick_and_morty_characters ................ [[32mOK[0m in 0.03s]
+[0m21:10:11.747090 [debug] [Thread-1 (]: Finished running node model.rick_and_morty.rick_and_morty_characters
+[0m21:10:11.747790 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:10:11.747901 [debug] [MainThread]: On master: BEGIN
+[0m21:10:11.747995 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:10:11.748197 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:10:11.748290 [debug] [MainThread]: On master: COMMIT
+[0m21:10:11.748381 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:10:11.748467 [debug] [MainThread]: On master: COMMIT
+[0m21:10:11.748600 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:10:11.748691 [debug] [MainThread]: On master: Close
+[0m21:10:11.748813 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:10:11.748900 [debug] [MainThread]: Connection 'model.rick_and_morty.rick_and_morty_characters' was properly closed.
+[0m21:10:11.748996 [info ] [MainThread]: 
+[0m21:10:11.749103 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.11 seconds (0.11s).
+[0m21:10:11.749333 [debug] [MainThread]: Command end result
+[0m21:10:11.757270 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alecpeters/dbt-duckdb/target/manifest.json
+[0m21:10:11.758032 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alecpeters/dbt-duckdb/target/semantic_manifest.json
+[0m21:10:11.760429 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/alecpeters/dbt-duckdb/target/run_results.json
+[0m21:10:11.760563 [info ] [MainThread]: 
+[0m21:10:11.760725 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:10:11.760833 [info ] [MainThread]: 
+[0m21:10:11.760950 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:10:11.782866 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.0220082, "process_in_blocks": "0", "process_kernel_time": 0.187408, "process_mem_max_rss": "140410880", "process_out_blocks": "0", "process_user_time": 0.915103}
+[0m21:10:11.783121 [debug] [MainThread]: Command `dbt run` succeeded at 21:10:11.783079 after 1.02 seconds
+[0m21:10:11.783276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1078daae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108657530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107504440>]}
+[0m21:10:11.783413 [debug] [MainThread]: Flushing usage events
+[0m21:10:12.239964 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:47:48.679970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10516a9f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055a0ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055a0860>]}
+
+
+============================== 21:47:48.683412 | 14063065-2769-4bcf-b8d9-8fb6e3b452ed ==============================
+[0m21:47:48.683412 [info ] [MainThread]: Running with dbt=1.9.2
+[0m21:47:48.683729 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/alecpeters/dbt-duckdb/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/alecpeters/dbt-duckdb', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:47:49.299733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103186ab0>]}
+[0m21:47:49.319341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055a0a10>]}
+[0m21:47:49.321366 [info ] [MainThread]: Registered adapter: duckdb=1.9.2
+[0m21:47:49.377561 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m21:47:49.422441 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:47:49.422601 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:47:49.424910 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.rick_and_morty.example
+[0m21:47:49.436461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105570650>]}
+[0m21:47:49.461260 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alecpeters/dbt-duckdb/target/manifest.json
+[0m21:47:49.462386 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alecpeters/dbt-duckdb/target/semantic_manifest.json
+[0m21:47:49.472610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105716e70>]}
+[0m21:47:49.472803 [info ] [MainThread]: Found 1 seed, 1 model, 426 macros
+[0m21:47:49.472932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105897b90>]}
+[0m21:47:49.473570 [info ] [MainThread]: 
+[0m21:47:49.473694 [info ] [MainThread]: Concurrency: 24 threads (target='dev')
+[0m21:47:49.473792 [info ] [MainThread]: 
+[0m21:47:49.473983 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:47:49.474326 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m21:47:49.510088 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m21:47:49.510276 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m21:47:49.510393 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:47:49.521816 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m21:47:49.522394 [debug] [ThreadPool]: On list_dev: Close
+[0m21:47:49.522661 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m21:47:49.522839 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m21:47:49.525632 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:47:49.525807 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m21:47:49.525922 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:47:49.526258 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:47:49.526762 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:47:49.526861 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m21:47:49.527008 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:47:49.527098 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:47:49.527193 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m21:47:49.527405 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:47:49.527671 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:47:49.527763 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m21:47:49.527849 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m21:47:49.527984 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:47:49.528073 [debug] [ThreadPool]: On create_dev_main: Close
+[0m21:47:49.529892 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m21:47:49.533412 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:47:49.533843 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m21:47:49.534677 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:47:49.537600 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m21:47:49.539072 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m21:47:49.539257 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m21:47:49.562122 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m21:47:49.562872 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m21:47:49.563840 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m21:47:49.563977 [debug] [ThreadPool]: On list_dev_main: Close
+[0m21:47:49.564396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b79160>]}
+[0m21:47:49.564575 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:47:49.564676 [debug] [MainThread]: On master: BEGIN
+[0m21:47:49.564765 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:47:49.564967 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:47:49.565059 [debug] [MainThread]: On master: COMMIT
+[0m21:47:49.565145 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:47:49.565229 [debug] [MainThread]: On master: COMMIT
+[0m21:47:49.565359 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:47:49.565446 [debug] [MainThread]: On master: Close
+[0m21:47:49.566558 [debug] [Thread-1 (]: Began running node model.rick_and_morty.rick_and_morty_characters
+[0m21:47:49.566774 [info ] [Thread-1 (]: 1 of 1 START sql view model main.rick_and_morty_characters ..................... [RUN]
+[0m21:47:49.566949 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.rick_and_morty.rick_and_morty_characters)
+[0m21:47:49.567076 [debug] [Thread-1 (]: Began compiling node model.rick_and_morty.rick_and_morty_characters
+[0m21:47:49.570009 [debug] [Thread-1 (]: Writing injected SQL for node "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.570311 [debug] [Thread-1 (]: Began executing node model.rick_and_morty.rick_and_morty_characters
+[0m21:47:49.582794 [debug] [Thread-1 (]: Writing runtime sql for node "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.583207 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.583343 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: BEGIN
+[0m21:47:49.583456 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:47:49.583728 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:47:49.583850 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.583971 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+
+  
+  create view "dev"."main"."rick_and_morty_characters__dbt_tmp" as (
+    select * 
+from "dev"."main"."characters"
+  );
+
+[0m21:47:49.584254 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:47:49.586605 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.586750 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+alter view "dev"."main"."rick_and_morty_characters" rename to "rick_and_morty_characters__dbt_backup"
+[0m21:47:49.587023 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:47:49.588121 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.588257 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+alter view "dev"."main"."rick_and_morty_characters__dbt_tmp" rename to "rick_and_morty_characters"
+[0m21:47:49.588475 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:47:49.593609 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: COMMIT
+[0m21:47:49.593747 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.593860 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: COMMIT
+[0m21:47:49.594336 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:47:49.596290 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m21:47:49.596422 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+drop view if exists "dev"."main"."rick_and_morty_characters__dbt_backup" cascade
+[0m21:47:49.596731 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:47:49.597697 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: Close
+[0m21:47:49.598689 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14063065-2769-4bcf-b8d9-8fb6e3b452ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10439a4e0>]}
+[0m21:47:49.598948 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.rick_and_morty_characters ................ [[32mOK[0m in 0.03s]
+[0m21:47:49.599178 [debug] [Thread-1 (]: Finished running node model.rick_and_morty.rick_and_morty_characters
+[0m21:47:49.602128 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:47:49.602240 [debug] [MainThread]: On master: BEGIN
+[0m21:47:49.602325 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:47:49.602501 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:47:49.602595 [debug] [MainThread]: On master: COMMIT
+[0m21:47:49.602684 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:47:49.602763 [debug] [MainThread]: On master: COMMIT
+[0m21:47:49.602890 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:47:49.602978 [debug] [MainThread]: On master: Close
+[0m21:47:49.603097 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:47:49.603176 [debug] [MainThread]: Connection 'model.rick_and_morty.rick_and_morty_characters' was properly closed.
+[0m21:47:49.603265 [info ] [MainThread]: 
+[0m21:47:49.603371 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.13 seconds (0.13s).
+[0m21:47:49.603601 [debug] [MainThread]: Command end result
+[0m21:47:49.610839 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alecpeters/dbt-duckdb/target/manifest.json
+[0m21:47:49.611597 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alecpeters/dbt-duckdb/target/semantic_manifest.json
+[0m21:47:49.613851 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/alecpeters/dbt-duckdb/target/run_results.json
+[0m21:47:49.613974 [info ] [MainThread]: 
+[0m21:47:49.614132 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:47:49.614238 [info ] [MainThread]: 
+[0m21:47:49.614353 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:47:49.638582 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.9915447, "process_in_blocks": "0", "process_kernel_time": 0.193368, "process_mem_max_rss": "136216576", "process_out_blocks": "0", "process_user_time": 0.845652}
+[0m21:47:49.638815 [debug] [MainThread]: Command `dbt run` succeeded at 21:47:49.638776 after 0.99 seconds
+[0m21:47:49.639002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055a08f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10516a9f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10516b6b0>]}
+[0m21:47:49.639299 [debug] [MainThread]: Flushing usage events
+[0m21:47:50.063682 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:20:08.691245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102d57770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ba8bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ba8980>]}
+
+
+============================== 22:20:08.693527 | 0340156a-e4b4-4ca3-862c-e50b81c7fe7e ==============================
+[0m22:20:08.693527 [info ] [MainThread]: Running with dbt=1.9.2
+[0m22:20:08.693790 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/alecpeters/dbt-duckdb/logs', 'profiles_dir': '/Users/alecpeters/dbt-duckdb', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m22:20:09.286722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c1a840>]}
+[0m22:20:09.306327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104682e40>]}
+[0m22:20:09.308387 [info ] [MainThread]: Registered adapter: duckdb=1.9.2
+[0m22:20:09.362707 [debug] [MainThread]: checksum: 12b12750b70de726cfd89136b8e24afc3f3e77597a97bff40ab7e5f9b39d5e18, vars: {}, profile: , target: , version: 1.9.2
+[0m22:20:09.407378 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:20:09.407571 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:20:09.409907 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.rick_and_morty.example
+[0m22:20:09.421961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d84e30>]}
+[0m22:20:09.446280 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alecpeters/dbt-duckdb/target/manifest.json
+[0m22:20:09.447202 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alecpeters/dbt-duckdb/target/semantic_manifest.json
+[0m22:20:09.460310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105065760>]}
+[0m22:20:09.460511 [info ] [MainThread]: Found 1 seed, 1 model, 426 macros
+[0m22:20:09.460640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d5d490>]}
+[0m22:20:09.461309 [info ] [MainThread]: 
+[0m22:20:09.461433 [info ] [MainThread]: Concurrency: 24 threads (target='dev')
+[0m22:20:09.461529 [info ] [MainThread]: 
+[0m22:20:09.461749 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:20:09.462105 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m22:20:09.497808 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m22:20:09.498010 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m22:20:09.498133 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:20:09.509064 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m22:20:09.509734 [debug] [ThreadPool]: On list_dev: Close
+[0m22:20:09.510027 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m22:20:09.510209 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m22:20:09.512812 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m22:20:09.512927 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m22:20:09.513021 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:20:09.513379 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:20:09.513840 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m22:20:09.513930 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m22:20:09.514072 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:20:09.514168 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m22:20:09.514262 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m22:20:09.514474 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:20:09.514762 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m22:20:09.514858 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m22:20:09.514941 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m22:20:09.515069 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:20:09.515163 [debug] [ThreadPool]: On create_dev_main: Close
+[0m22:20:09.516983 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_main, now list_dev_main)
+[0m22:20:09.519203 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m22:20:09.519322 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m22:20:09.519412 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:20:09.519629 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:20:09.519717 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m22:20:09.519810 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m22:20:09.527670 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m22:20:09.528279 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m22:20:09.529247 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m22:20:09.529382 [debug] [ThreadPool]: On list_dev_main: Close
+[0m22:20:09.529762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c0c9e0>]}
+[0m22:20:09.529949 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:20:09.530045 [debug] [MainThread]: On master: BEGIN
+[0m22:20:09.530129 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:20:09.530299 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:20:09.530397 [debug] [MainThread]: On master: COMMIT
+[0m22:20:09.530480 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:20:09.530562 [debug] [MainThread]: On master: COMMIT
+[0m22:20:09.530698 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:20:09.530788 [debug] [MainThread]: On master: Close
+[0m22:20:09.531771 [debug] [Thread-1 (]: Began running node model.rick_and_morty.rick_and_morty_characters
+[0m22:20:09.531975 [info ] [Thread-1 (]: 1 of 1 START sql view model main.rick_and_morty_characters ..................... [RUN]
+[0m22:20:09.532146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dev_main, now model.rick_and_morty.rick_and_morty_characters)
+[0m22:20:09.532265 [debug] [Thread-1 (]: Began compiling node model.rick_and_morty.rick_and_morty_characters
+[0m22:20:09.535136 [debug] [Thread-1 (]: Writing injected SQL for node "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.535458 [debug] [Thread-1 (]: Began executing node model.rick_and_morty.rick_and_morty_characters
+[0m22:20:09.548144 [debug] [Thread-1 (]: Writing runtime sql for node "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.548548 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.548676 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: BEGIN
+[0m22:20:09.548784 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:20:09.549022 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:20:09.549124 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.549228 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+
+  
+  create view "dev"."main"."rick_and_morty_characters__dbt_tmp" as (
+    select * 
+from "dev"."main"."characters"
+  );
+
+[0m22:20:09.549570 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:20:09.551937 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.552067 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+alter view "dev"."main"."rick_and_morty_characters" rename to "rick_and_morty_characters__dbt_backup"
+[0m22:20:09.552367 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:20:09.553442 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.553566 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+alter view "dev"."main"."rick_and_morty_characters__dbt_tmp" rename to "rick_and_morty_characters"
+[0m22:20:09.553772 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:20:09.559014 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: COMMIT
+[0m22:20:09.559187 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.559326 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: COMMIT
+[0m22:20:09.559870 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:20:09.561682 [debug] [Thread-1 (]: Using duckdb connection "model.rick_and_morty.rick_and_morty_characters"
+[0m22:20:09.561838 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: /* {"app": "dbt", "dbt_version": "1.9.2", "profile_name": "rick_and_morty", "target_name": "dev", "node_id": "model.rick_and_morty.rick_and_morty_characters"} */
+drop view if exists "dev"."main"."rick_and_morty_characters__dbt_backup" cascade
+[0m22:20:09.562127 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m22:20:09.563019 [debug] [Thread-1 (]: On model.rick_and_morty.rick_and_morty_characters: Close
+[0m22:20:09.563813 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0340156a-e4b4-4ca3-862c-e50b81c7fe7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ce1f10>]}
+[0m22:20:09.564072 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.rick_and_morty_characters ................ [[32mOK[0m in 0.03s]
+[0m22:20:09.564284 [debug] [Thread-1 (]: Finished running node model.rick_and_morty.rick_and_morty_characters
+[0m22:20:09.564994 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:20:09.565102 [debug] [MainThread]: On master: BEGIN
+[0m22:20:09.565191 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:20:09.565370 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:20:09.565465 [debug] [MainThread]: On master: COMMIT
+[0m22:20:09.565555 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:20:09.565642 [debug] [MainThread]: On master: COMMIT
+[0m22:20:09.565770 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:20:09.565864 [debug] [MainThread]: On master: Close
+[0m22:20:09.565985 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:20:09.566074 [debug] [MainThread]: Connection 'model.rick_and_morty.rick_and_morty_characters' was properly closed.
+[0m22:20:09.566172 [info ] [MainThread]: 
+[0m22:20:09.566284 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.10 seconds (0.10s).
+[0m22:20:09.566510 [debug] [MainThread]: Command end result
+[0m22:20:09.573642 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/alecpeters/dbt-duckdb/target/manifest.json
+[0m22:20:09.574317 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/alecpeters/dbt-duckdb/target/semantic_manifest.json
+[0m22:20:09.576524 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/alecpeters/dbt-duckdb/target/run_results.json
+[0m22:20:09.576642 [info ] [MainThread]: 
+[0m22:20:09.576792 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:20:09.576896 [info ] [MainThread]: 
+[0m22:20:09.577013 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:20:09.596549 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.93542457, "process_in_blocks": "0", "process_kernel_time": 0.183471, "process_mem_max_rss": "136134656", "process_out_blocks": "0", "process_user_time": 0.820934}
+[0m22:20:09.596782 [debug] [MainThread]: Command `dbt run` succeeded at 22:20:09.596745 after 0.94 seconds
+[0m22:20:09.596928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ba8a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10400d3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103792c30>]}
+[0m22:20:09.597062 [debug] [MainThread]: Flushing usage events
+[0m22:20:10.215419 [debug] [MainThread]: An error was encountered while trying to flush usage events
