@@ -2,6 +2,6 @@ rick_and_morty:
   outputs:
     dev:
       type: duckdb
-      path: dev.duckdb
-      threads: 1
+      path: 'dev.duckdb'
+      threads: 24
   target: dev
