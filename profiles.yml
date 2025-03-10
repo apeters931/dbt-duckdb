@@ -4,3 +4,4 @@ rick_and_morty:
       type: duckdb
       path: dev.duckdb
       threads: 1
+  target: dev
