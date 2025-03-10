@@ -1,1 +1,2 @@
-select * from "dev"."main"."characters"
+select * 
+from "dev"."main"."characters"

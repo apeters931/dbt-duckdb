@@ -23,14 +23,6 @@ jobs:
             python-version: "3.8.x"
         - name: Full Deploy Commands
           run: |
-            python3 -m venv venv
-            source venv/bin/activate
-            venv/bin/python3 -m pip install --upgrade pip
-            python3 -m pip install -r requirements.txt
-            source venv/bin/activate
-            which dbt
-            dbt --version
-            dbt debug
             dbt build
             dbt docs generate
             duckcli dev.duckdb -e "select * from rick_and_morty_characters"
