@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "dev"."main"."characters" ("id" integer,"name" text,"no_ep" integer)
+  ;
+    -- dbt seed --
+    
+          COPY "dev"."main"."characters" FROM '/Users/alecpeters/Documents/rick_and_morty/seeds/characters.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
