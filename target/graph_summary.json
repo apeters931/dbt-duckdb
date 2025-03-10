@@ -1,1 +1,1 @@
-{"_invocation_id": "4918d930-37b2-416c-9d41-7492989dab77", "linked": {"0": {"name": "seed.rick_and_morty.characters", "type": "seed", "succ": [1]}, "1": {"name": "model.rick_and_morty.rick_and_morty_characters", "type": "model"}}}
+{"_invocation_id": "14063065-2769-4bcf-b8d9-8fb6e3b452ed", "linked": {"0": {"name": "seed.rick_and_morty.characters", "type": "seed", "succ": [1]}, "1": {"name": "model.rick_and_morty.rick_and_morty_characters", "type": "model"}}}
