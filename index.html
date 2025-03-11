@@ -1,9 +1,26 @@
 <!DOCTYPE html>
+<head>
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
 <html>
-<body>
-
-<h1>Date: mdy</h1>
-<img src="my_plot.png" alt="bar chart">
-
-</body>
-</html>
+    <body>
+        <h2>Last Update: 3/10/2025</h2>
+        <div class="chart-main">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="chart-filters">
+            <label>Number of Episodes: </label>
+            <select id="sign">
+                <option value="equalTo" selected="selected">equal to</option>
+                <option value="greaterThan">greater than</option>
+                <option value="LessThan">less than</option>
+            </select>
+            <input type="text" id="numberValue" value="40"><br>
+            <script src="dashboard.js" type="module"></script>
+        </div>
+    </body>
+</html> 
