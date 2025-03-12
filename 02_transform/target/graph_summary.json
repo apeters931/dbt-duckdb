@@ -1,0 +1,1 @@
+{"_invocation_id": "d921695d-dca0-4bd5-b834-538cb1299f7a", "linked": {"0": {"name": "seed.rick_and_morty.characters", "type": "seed", "succ": [1]}, "1": {"name": "model.rick_and_morty.rick_and_morty_characters", "type": "model"}}}

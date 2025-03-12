@@ -24,9 +24,11 @@ def parse_json(response):
 
 mainlist = []
 data = main_request(baseurl, endpoint, 2)
+print("Request")
 for x in range(1,get_pages(data)+1):
     print(x)
     mainlist.extend(parse_json(main_request(baseurl, endpoint, x)))
 
 df = pd.DataFrame(mainlist)
-df.to_csv('characters.csv', index=False)
+df.to_csv('02_transform/seeds/characters.csv', index=False)
+print("character seed file created/updated in seeds directory!")

@@ -3,7 +3,7 @@ var sign = document.getElementById("sign").value;
 var number_val = document.getElementById("numberValue").value;
 var barChart;
 
-fetch("../exports/characters_transformed.json")
+fetch("../03_load/characters_transformed.json")
 .then(response => response.json())
 .then(data => {
 
