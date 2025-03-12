@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<html>
+    <body>
+        <h2>Last Update: 3/10/2025</h2>
+        <div class="chart-main">
+            <canvas id="barchart"></canvas>
+        </div>
+        <div class="chart-filters">
+            <label>Number of Episodes: </label>
+            <select id="sign" class="dropdown">
+                <option value="greaterThan" selected="selected">greater than</option>
+                <option value="lessThan">less than</option>
+            </select>
+            <input type="text" id="numberValue" class="inputbox" value="5"><br>
+            <button id="filterButton">filter</button>
+        </div>
+        <script src="dashboard.js" type="module"></script>
+    </body>
+</html> 
